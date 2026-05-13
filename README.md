@@ -1,11 +1,8 @@
 # Nextcloud docker-client
 This image provides you an alpine based image for syncing your files with a remote [nextcloud server ](https://nextcloud.com/)
 
-[![](https://images.microbadger.com/badges/image/juanitomint/nextcloud-client.svg)](https://microbadger.com/images/juanitomint/nextcloud-client "Get your own image badge on microbadger.com")
-[![](https://images.microbadger.com/badges/version/juanitomint/nextcloud-client.svg)](https://microbadger.com/images/juanitomint/nextcloud-client "Get your own version badge on microbadger.com")
 
-
-This image is based on the work made by: [Martin Peters](https://github.com/FreakyBytes)
+This image is based on the work made by: [Martin Peters](https://github.com/FreakyBytes) and [juanitomint](https://github.com/juanitomint/nextcloud-client-docker).
 
 ## Example using local folder
 
@@ -13,7 +10,7 @@ This image is based on the work made by: [Martin Peters](https://github.com/Frea
       -v $(pwd)/sync-folder:/media/nextcloud \
       -e NC_USER=$username -e NC_PASS=$password \
       -e NC_URL=$server_url\
-      juanitomint/nextcloud-client
+      leafnode/nextcloud-client
 
 ## Example using local folder and exclude settings. You have to place a "exclude" file and a "unsyncfolders" file into one directory and mount it into the docker container
 
@@ -22,7 +19,7 @@ This image is based on the work made by: [Martin Peters](https://github.com/Frea
       -v /path/to/settingsfolder:/settings \
       -e NC_USER=$username -e NC_PASS=$password \
       -e NC_URL=$server_url\
-      juanitomint/nextcloud-client
+      leafnode/nextcloud-client
 
 ## Example for the file "exclude" in the settings folder
 
@@ -40,7 +37,7 @@ This image is based on the work made by: [Martin Peters](https://github.com/Frea
       -v some_named_volume:/media/nextcloud \
       -e NC_USER=$username -e NC_PASS=$password \
       -e NC_URL=$server_url\
-      juanitomint/nextcloud-client
+      leafnode/nextcloud-client
 
 ## Example one time run
 
@@ -49,7 +46,7 @@ This image is based on the work made by: [Martin Peters](https://github.com/Frea
       -e NC_USER=$username -e NC_PASS=$password \
       -e NC_URL=$server_url\
       -e NC_EXIT=true\
-      juanitomint/nextcloud-client
+      leafnode/nextcloud-client
 
 
 
@@ -121,5 +118,5 @@ whether or not nextcloud should be forced to sync hidden files
 default: false
 
 
-Any comment or propblem feel free to [fill an issue](https://github.com/juanitomint/nextcloud-client-docker/issues/new) or make a PR!
+Any comment or propblem feel free to [fill an issue](https://github.com/leafnode/nextcloud-client-docker/issues/new) or make a PR!
 
